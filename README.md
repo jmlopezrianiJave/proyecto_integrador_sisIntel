@@ -4,21 +4,52 @@ Sistema de monitoreo ambiental e inteligencia artificial para la predicción de 
 
 Elaborado por Jose M. Lopez, Maria C. Caicedo, Kevin Perez y Juan D. Valencia.
 
-## Instalación
+## Paso a paso para ejecutar el proyecto
+
+**Requisitos previos:** Python 3.10 o superior, conexión a internet (solo la primera vez).
+
+**1. Clonar el repositorio**
+
+```bash
+git clone https://github.com/jmlopezrianiJave/proyecto_integrador_sisIntel.git
+cd proyecto_integrador_sisIntel
+```
+
+**2. (Opcional) Crear un entorno virtual**
+
+```bash
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+# macOS / Linux
+source venv/bin/activate
+```
+
+**3. Instalar dependencias**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Uso
+**4. Ejecutar el pipeline completo**
 
 ```bash
 python main.py
 ```
 
-La primera ejecución descarga los datos desde [datos.gov.co](https://datos.gov.co) y los guarda en `data/raw/`. Las ejecuciones siguientes usan el caché local.
+La primera ejecución descarga los datos desde [datos.gov.co](https://datos.gov.co) y los guarda en `data/raw/` (puede tomar varios minutos). Las ejecuciones siguientes usan el caché local y son mucho más rápidas.
 
-Los gráficos se guardan automáticamente en `docs/graphs/`.
+Al terminar encontrarás los gráficos en `docs/graphs/` y los datos procesados en `data/processed/`.
+
+**5. (Opcional) Verificar los tests**
+
+```bash
+pytest tests/ -v
+```
+
+Esperado: 28 tests pasando.
 
 ## Estructura del proyecto
 
