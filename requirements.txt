@@ -1,0 +1,9 @@
+pandas>=1.5
+numpy>=1.23
+matplotlib>=3.6
+seaborn>=0.12
+sodapy>=2.2
+scikit-learn>=1.2
+imbalanced-learn>=0.10
+pyarrow>=11.0
+pytest>=7.0
