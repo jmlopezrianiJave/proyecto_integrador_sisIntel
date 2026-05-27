@@ -158,6 +158,14 @@ def entrenar_por_tipo(
     if tipo_col is None:
         return {}
 
+    # proc_dfs["desastres"] has fecha_de_ocurrencia but not periodo;
+    # derive it here the same way construir_panel_base does on its local copy.
+    df_des = df_des.copy()
+    if "periodo" not in df_des.columns:
+        df_des["periodo"] = pd.to_datetime(
+            df_des["fecha_de_ocurrencia"], errors="coerce"
+        ).dt.to_period("M")
+
     tipo_metrics = []
     for tipo in df_des[tipo_col].value_counts().head(5).index.tolist():
         tipo_df = (
