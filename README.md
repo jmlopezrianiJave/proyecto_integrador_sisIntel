@@ -1,5 +1,5 @@
 # Sistema Inteligente de Alertas Climáticas Tempranas — Santander
-
+# Video: https://youtu.be/V_rbhVzFg4g
 Sistema de monitoreo ambiental e inteligencia artificial para la predicción de desastres naturales en el departamento de Santander, Colombia. Cruza datos climáticos del IDEAM (temperatura, precipitación, humedad) con registros históricos de desastres de las corporaciones CAS y CDMB.
 
 Elaborado por Jose M. Lopez, Samuel F. Moncayo, Maria C. Caicedo, Kevin Perez y Juan D. Valencia.
