@@ -195,7 +195,8 @@ def main():
           f"F1={clf_results[best_clf_name]['f1']:.4f}")
 
     # 3d. Bayesian
-    prior      = float(y_tr.mean()) if hasattr(y_tr, "mean") else float(np.array(y_tr).mean())
+    # prior      = float(y_tr.mean()) if hasattr(y_tr, "mean") else float(np.array(y_tr).mean())
+    prior = train["desastre"].mean()
     p_clf_te   = clf_results[best_clf_name]["y_prob"]
     rareza_te  = test["rareza_z"].values          if "rareza_z"          in test.columns else None
     prec_an_te = test["prec_media_zscore"].values  if "prec_media_zscore" in test.columns else None
